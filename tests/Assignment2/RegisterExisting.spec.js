@@ -19,8 +19,4 @@ test('TC-05 - Register User with existing email', async ({ page }) => {
 
     await expect(page.locator("text=Email Address already exist!")).toBeVisible();
 
-    await page.click("//input[@name='submit']");
-
-    
-
 });

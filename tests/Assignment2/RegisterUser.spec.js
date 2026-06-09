@@ -13,7 +13,7 @@ test('TC-01 - Register User', async({ page })=> {
     await expect(page.locator("//h2[normalize-space()='New User Signup!']")).toBeVisible();
 
     await page.locator("//input[@placeholder='Name']").fill('test');
-    await page.locator("//input[@data-qa='signup-email']").fill('testuser14@uuygt.com');
+    await page.locator("//input[@data-qa='signup-email']").fill('testuser16@uuygt.com');
 
     await page.locator("//button[normalize-space()='Signup']").click();
 
@@ -48,11 +48,11 @@ test('TC-01 - Register User', async({ page })=> {
 
   await expect(page.locator("//li[10]//a[1]")).toBeVisible();
 
-  //await page.click("a[href='/delete_account']");
+  await page.click("a[href='/delete_account']");
 
-  //await expect(page.locator("//b[normalize-space()='Account Deleted!']")).toBeVisible();
+  await expect(page.locator("//b[normalize-space()='Account Deleted!']")).toBeVisible();
 
-  //await page.locator("//a[normalize-space()='Continue']").click();
+  await page.locator("//a[normalize-space()='Continue']").click();
 
 
 })

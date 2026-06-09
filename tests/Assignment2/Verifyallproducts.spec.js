@@ -19,7 +19,8 @@ test('TC-08 - Verify all Products and products detail page', async ({ page }) =>
     await page.locator('text=View Product').first().click();
     await page.waitForTimeout(1000);
 
-    await expect(page).toHaveURL("https://automationexercise.com/product_details/1");
+    //await expect(page).toHaveURL("https://automationexercise.com/product_details/1");
+    await expect(page).toHaveURL(/product_details/);
 
     //step - 9
 

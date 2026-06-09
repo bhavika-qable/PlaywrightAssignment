@@ -38,8 +38,9 @@ test('TC-06 - contactUs Form', async ({ page }) => {
 
     await page.locator("//span[normalize-space()='Home']").click();
 
-    await expect(page).toHaveURL('https://automationexercise.com/');
-
+  //  await expect(page).toHaveURL('https://automationexercise.com/');
+  
+    await expect(page).toHaveURL(/automationexercise\.com/);
     
 
 

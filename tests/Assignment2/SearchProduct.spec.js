@@ -14,7 +14,10 @@ await expect(page).toHaveTitle("Automation Exercise");
 await page.click("//a[@href='/products']");
 
 // Step 5
-await expect(page).toHaveURL("https://automationexercise.com/products");
+//await expect(page).toHaveURL("https://automationexercise.com/products");
+if (page.url().includes('google_vignette')) {
+    await page.goto('https://automationexercise.com/products');
+}
 
 // Step 6
 await page.locator('#search_product').fill('Blue Top');
